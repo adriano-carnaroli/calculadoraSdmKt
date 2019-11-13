@@ -20,4 +20,8 @@
     <string name="porcentagem">%</string>
     <string name="desfazer">C</string>
     <string name="limpar">CE</string>
+    <string-array name="tipo_leiaute">
+        <item>Básico</item>
+        <item>Avançado</item>
+    </string-array>
 </resources>

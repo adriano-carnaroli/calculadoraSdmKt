@@ -1,151 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:background="@android:color/black"
-        tools:context=".MainActivity">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              tools:context=".view.MainActivity"
+              android:orientation="vertical">
 
-    <TextView
+    <!-- Toolbar que substitui a SupportActionBar -->
+    <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:id="@+id/lcdTv"
-            android:layout_weight="0.2"
-            android:inputType="numberDecimal"
-            android:hint="0"
-            android:textColorHint="@android:color/white"
-            android:background="@android:color/background_dark"
-            android:textColor="@android:color/white"
-            android:textSize="50sp"
-            android:textAlignment="textEnd"/>
+            android:layout_height="?actionBarSize">
+        <include layout="@layout/toolbar" />
+    </com.google.android.material.appbar.AppBarLayout>
 
-
-    <LinearLayout android:layout_width="match_parent"
-                  android:layout_height="0dp"
-                  android:layout_weight="0.2"
-                  android:background="@android:color/black"
-                  android:orientation="horizontal">
-
-        <Button android:id="@+id/limparBt"
-                android:text="@string/limpar"
-                style="@style/CalcButtonAc"/>
-
-        <Button android:id="@+id/desfazerBt"
-                android:text="@string/desfazer"
-                style="@style/CalcButtonAc"/>
-
-        <Button android:id="@+id/porcentagemBt"
-                android:text="@string/porcentagem"
-                style="@style/CalcButtonAc"/>
-
-        <Button android:id="@+id/raizBt"
-                android:text="@string/raiz"
-                style="@style/CalcButtonAc"/>
-
-    </LinearLayout>
-
-    <LinearLayout android:layout_width="match_parent"
-                  android:layout_height="0dp"
-                  android:layout_weight="0.2"
-                  android:background="@android:color/black"
-                  android:orientation="horizontal">
-
-        <Button android:id="@+id/seteBt"
-                android:text="@string/sete"
-                style="@style/CalcButton"/>
-
-        <Button android:id="@+id/oitoBt"
-                android:text="@string/oito"
-                style="@style/CalcButton"/>
-
-        <Button android:id="@+id/noveBt"
-                android:text="@string/nove"
-                style="@style/CalcButton"/>
-
-        <Button android:id="@+id/maisBt"
-                android:text="@string/adicao"
-                style="@style/CalcButtonOp"/>
-
-    </LinearLayout>
-
-
-    <LinearLayout android:layout_width="match_parent"
-                  android:layout_height="0dp"
-                  android:layout_weight="0.2"
-                  android:background="@android:color/black"
-                  android:orientation="horizontal">
-
-        <Button android:id="@+id/quatroBt"
-                android:text="@string/quatro"
-                android:onClick="onClickBtNum"
-                style="@style/CalcButton"/>
-
-        <Button android:id="@+id/cincoBt"
-                android:text="@string/cinco"
-                android:onClick="onClickBtNum"
-                style="@style/CalcButton"/>
-
-        <Button android:id="@+id/seisBt"
-                android:text="@string/seis"
-                android:onClick="onClickBtNum"
-                style="@style/CalcButton"/>
-
-        <Button android:id="@+id/menosBt"
-                android:text="@string/subtrair"
-                android:onClick="onClickBtSub"
-                style="@style/CalcButtonOp"/>
-
-    </LinearLayout>
-
-    <LinearLayout android:layout_width="match_parent"
-                  android:layout_height="0dp"
-                  android:layout_weight="0.2"
-                  android:background="@android:color/black"
-                  android:orientation="horizontal">
-
-        <Button android:id="@+id/umBt"
-                android:text="@string/um"
-                style="@style/CalcButton"/>
-
-        <Button android:id="@+id/doisBt"
-                android:text="@string/dois"
-                style="@style/CalcButton"/>
-
-        <Button android:id="@+id/tresBt"
-                android:text="@string/tres"
-                style="@style/CalcButton"/>
-
-        <Button android:id="@+id/multiplicacaoBt"
-                android:text="@string/multiplicar"
-                style="@style/CalcButtonOp"/>
-
-    </LinearLayout>
-
-
-    <LinearLayout android:layout_width="match_parent"
-                  android:layout_height="0dp"
-                  android:layout_weight="0.2"
-                  android:background="@android:color/black"
-                  android:orientation="horizontal">
-
-        <Button android:id="@+id/zeroBt"
-                android:text="@string/zero"
-                style="@style/CalcButton"/>
-
-        <Button android:id="@+id/pontoBt"
-                android:text="@string/ponto"
-                style="@style/CalcButton"/>
-
-        <Button android:id="@+id/igualBt"
-                android:text="@string/igual"
-                style="@style/CalcButtonOp"/>
-
-        <Button android:id="@+id/divisaoBt"
-                android:text="@string/dividir"
-                style="@style/CalcButtonOp"/>
-
-    </LinearLayout>
-
+    <!-- Leiaute que será ocupado pelos Fragments -->
+    <FrameLayout
+            android:id="@+id/calculadoraFl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/black"/>
 </LinearLayout>
